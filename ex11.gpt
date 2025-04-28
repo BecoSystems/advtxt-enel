@@ -1,0 +1,24 @@
+algoritmo aventura_floresta;
+variáveis
+    objeto : literal;
+    acao : literal;
+fim-variáveis
+início
+    imprima("Você está em uma floresta sombria e encontra um inimigo.\n");
+    imprima("Escolha um objeto para usar: ");
+    objeto := leia();
+
+    imprima("Escolha uma ação a realizar: ");
+    acao := leia();
+
+    verificar_escolhas(objeto, acao);
+fim
+
+função verificar_escolhas(objeto : literal, acao : literal)
+início
+    se objeto = "espada" e acao = "lutar" então
+        imprima("Você empunha sua espada e derrota o inimigo! Vitória!\n");
+    senão
+        imprima("Você falha em sua tentativa e é derrotado. Fim de jogo.\n");
+    fim-se
+fim
